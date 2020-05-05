@@ -4,7 +4,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import AddPhotoNavigations from "./PhotoTabs";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
-import { Text, TouchableOpacity } from "react-native";
 import Home from "../screens/Home";
 import Notifications from "../screens/Notifications";
 import Search from "../screens/Search";

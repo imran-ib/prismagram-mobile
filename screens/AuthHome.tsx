@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { Image } from "react-native-elements";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import { Button } from "react-native-elements";
 import styled from "styled-components/native";
 import { useNavigation } from "@react-navigation/native";
 import { screen } from "../components/Utils/Dimensions";
@@ -13,26 +13,29 @@ const Container = styled.View`
 `;
 
 const ImageContainer = styled.Image`
-  width: ${screen.width / 3};
-  height: 25px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: -25px;
 `;
 
 const AuthHome = () => {
   const navigation = useNavigation();
-
   return (
     <Container>
       <ImageContainer
         resizeMode="contain"
         source={require("../assets/logo.svg.webp")}
       />
+
+      <TouchableOpacity>
+        <Button
+          buttonStyle={{ width: "45px" }}
+          title="Create Account"
+          onPress={() => navigation.navigate("Signup")}
+        />
+      </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate("Login")}>
         <Text>Login If You Already Have An Account</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text onPress={() => navigation.navigate("Signup")}>
-          Create An Account
-        </Text>
       </TouchableOpacity>
     </Container>
   );
