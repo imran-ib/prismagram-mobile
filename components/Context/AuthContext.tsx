@@ -14,9 +14,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
   children,
 }) => {
   const [isLoggedin, setisLoggedin] = useState(isLoggedinProps);
-  const LogUserIn = async () => {
+  const LogUserIn = async (token: string) => {
+    console.log("LogUserIn -> token", token);
     try {
       AsyncStorage.setItem("isLoggedIn", "true");
+      AsyncStorage.setItem("Token", token);
       setisLoggedin(true);
     } catch (error) {
       console.log(error);
@@ -37,7 +39,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
     </AuthContext.Provider>
   );
 };
-const useIsLoggedin = () => {
+export const useIsLoggedin = () => {
   const { isLoggedin } = useContext(AuthContext);
   return isLoggedin;
 };

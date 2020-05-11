@@ -1,0 +1,20 @@
+{
+  "cSpell.words": ["Signup"],
+  "workbench.colorTheme": "Shades of Purple",
+  "better-comments.multilineComments": true,
+  "editor.formatOnSave": true,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "better-comments.highlightPlainText": false,
+  "window.zoomLevel": 0,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true
+}
